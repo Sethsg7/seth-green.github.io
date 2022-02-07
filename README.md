@@ -16,3 +16,10 @@
 1.In terminal enter => git add -A
 2.In terminal enter => git commit -m "description in quotes" (Description is important)
 3. In terminal enter => git push 
+
+**Testing Homework**
+1. Type os test.
+2. Have personal access code ready.
+3. Select assignment.
+4. Look for failing tests.
+5. After passing, type os submit.

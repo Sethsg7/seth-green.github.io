@@ -14,9 +14,8 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    
-
-
+    //Use .length to find the length of string.
+    return string.length;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -25,22 +24,22 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    //Force the string into lowercase.
+    return string.toLowerCase()
     // YOUR CODE ABOVE HERE //
 }
+
 
 /**
  * Given an input String, return a new String forced to uppercase.
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    //Force the string into uppercase.
+    return string.toUpperCase();
     // YOUR CODE ABOVE HERE //
 }
+
 
 /**
  * Given an input String, return a new String forced to dash-case.
@@ -57,11 +56,12 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+    //Force string into dashcase.
+    return string.toDashCase;
 
     // YOUR CODE ABOVE HERE //
 }
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -77,9 +77,13 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    
-
+    if (string[0] == char.toLowerCase()) {
+        return true;
+    } else if (string[0] == char.toUpperCase()) 
+    {return true
+    } else {
+        return false;
+    };
     // YOUR CODE ABOVE HERE //
 }
 
@@ -95,13 +99,23 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+ 
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
-
+    if (string[string.length-1] == char.toLowerCase()) {
+        return true;
+    } else if(string[string.length-1] == char.toUpperCase())  {
+        return true;
+    } else {
+        return false;
+    };
     // YOUR CODE ABOVE HERE //
 }
+
+
+
+
+
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
@@ -110,11 +124,14 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    //Concat the strings with operator.
+    return stringOne + stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
+
+
+
 
 /**
  * Given any number of Strings, return all of them joined together.
@@ -130,9 +147,14 @@ function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
 
+    var arguments = stringOne, stringTwo;
+    return args.join(' ');
 
     // YOUR CODE ABOVE HERE //
 }
+
+
+
 
 /**
  * Given two Strings, return the longest of the two.
@@ -145,11 +167,18 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    //Check which string has the greater length.
+    if (stringOne.length > stringTwo.length) {
+        return stringOne
+        }
+        else if (stringOne.length < stringTwo.length) {
+            return stringTwo
+        }; 
 
     // YOUR CODE ABOVE HERE //
 }
+
+
 
 /**
  * Given two Strings, return 1 if the first is higher in alphabetical order than
@@ -160,8 +189,15 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    //Check which string is greater and adjust output accordingly.
+    if (stringOne > stringTwo) {
+        return -1;
+    } else if (stringOne < stringTwo) {
+        return 1
+    //Else covers them being equal since that's the only option left.
+    } else {
+        return 0;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -177,9 +213,15 @@ function sortAscending(stringOne, stringTwo) {
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
-
-
+    //Check which string is greater and adjust output accordingly.
+    if (stringOne < stringTwo) {
+        return -1;
+    } else if (stringOne > stringTwo) {
+        return 1
+    //Else covers them being equal since that's the only option left.
+    } else {
+        return 0;
+    }
     // YOUR CODE ABOVE HERE //
 }
 

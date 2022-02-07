@@ -17,13 +17,13 @@
  */
 function print(value) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //Print the value parameter to the console.
+  return console.log(value);
   
   // YOUR CODE ABOVE HERE //
 }
-
-
+//Example of using the function.
+//print(1);
 
 
 
