@@ -54,11 +54,12 @@ function toUpperCase(string) {
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
-function toDashCase(string) {
+
+ function toDashCase(string) {
     // YOUR CODE BELOW HERE //
     //Force string into dashcase.
-    return string.toDashCase;
-
+  var dashed = string.replace(/[" "]/g,"-");
+  return dashed.toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -145,11 +146,10 @@ function concat(stringOne, stringTwo) {
  */
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
+    //Args = Array.from(arguments), which is turning the arguments into an array.
+    //Return args joined together.
     var args = Array.from(arguments);
-
-    var arguments = stringOne, stringTwo;
-    return args.join(' ');
-
+    return args.join('');
     // YOUR CODE ABOVE HERE //
 }
 

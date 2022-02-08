@@ -18,8 +18,11 @@
 3. In terminal enter => git push 
 
 **Testing Homework**
-1. Type os test.
-2. Have personal access code ready.
-3. Select assignment.
-4. Look for failing tests.
-5. After passing, type os submit.
+
+1. Type sudo apt-get install subversion
+2. TYPE npm install -g opspark
+4. Type os test.
+5. Have personal access code ready.
+6. Select assignment.
+7. Look for failing tests.
+8. After passing, type os submit.
