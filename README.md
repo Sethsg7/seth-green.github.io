@@ -18,7 +18,6 @@
 3. In terminal enter => git push 
 
 **Testing Homework**
-
 1. Type sudo apt-get install subversion
 2. TYPE npm install -g opspark
 4. Type os test.
