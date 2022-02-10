@@ -47,7 +47,10 @@ function isObject(value) {
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    if (Array.isarray(value) === true || typeof value === 'object' && value )
+
+
+
     
     
     // YOUR CODE ABOVE HERE //
@@ -57,12 +60,12 @@ function isCollection(value) {
  * Given an input value, return the type of the value as a String
  * 
  * Types are one of: 
- *    - "string"
+ *    - "string"**
  *    - "array"
  *    - "object"
- *    - "undefined"
- *    - "number"
- *    - "boolean"
+ *    - "undefined"**
+ *    - "number"**
+ *    - "boolean"**
  *    - "null"
  *    - "function"
  *    - "date"
@@ -75,6 +78,7 @@ function isCollection(value) {
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     
+
     
     
     
