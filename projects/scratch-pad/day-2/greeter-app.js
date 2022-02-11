@@ -31,17 +31,27 @@
  * 
  *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
  *      the exact case.
+ * 
+ *I:Use if structure to write time of day greeting.
+ *O:Greeting based on the time. Case sensitive.
+ *C
+ *E
  */
 
-function greeter(hour) {
+ function greeter(hour) {
     // YOUR CODE BELOW HERE //
+    if (hour >= 0 && hour <= 11 ) {
+      console.log('Good Morning!');
+    } else if (hour >= 12 && hour <= 16){
+      console.log('Good Afternoon!')
+    } else if (hour >= 17 && hour <= 21) {
+    console.log('Good Evening!')
+    } else {console.log('Good Night!')
     
-    
-    
+    };
     
     // YOUR CODE ABOVE HERE //
 }
-
 /*
  * To test our greeter when developing, we need to fake some input data, ie, 
  * the hour, so just change the input value to check your work.
