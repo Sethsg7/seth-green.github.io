@@ -25,14 +25,14 @@
  * Given an input Array, loop backwards over the Array and print its values 
  * using console.log().
  */
-function printArrayValuesInReverse(array) {
-    let reversedArray = [];  
-    for (var i = 2; i >= 0; i--) {
-    reversedArray.push(array[i])
-  };
-  return console.log(reversedArray);
-  
-  // YOUR CODE ABOVE HERE //
+ function printArrayValuesInReverse(array) {
+  let reversedArray = [];  
+  for (var i = array.length - 1; i >= 0; i--) {
+  console.log(reversedArray.push(array[i]))
+};
+return reversedArray;
+
+// YOUR CODE ABOVE HERE //
 }
 
 
