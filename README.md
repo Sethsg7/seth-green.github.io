@@ -14,7 +14,7 @@
 
 **Github commands**
 1.In terminal enter => git add -A
-2.In terminal enter => git commit -m "description in quotes" (Description is important)
+2.In terminal enter => git commit -m "description in quotes" 
 3. In terminal enter => git push 
 
 **Testing Homework**
