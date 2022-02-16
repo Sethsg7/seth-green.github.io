@@ -46,12 +46,12 @@ function valuesToString(object){
 function arrayOrObject(collection) {
     if (Array.isArray(collection) === true) 
     {
-      return 'Array'
+      return 'array'
     } 
     
     else if (typeof collection === 'object') 
     {
-      return 'Object'
+      return 'object'
     }
     };
     
