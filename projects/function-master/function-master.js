@@ -27,13 +27,9 @@ function keysToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object){ 
-        for (var key in object) {
-      var arr = Object.values(object)
-      return arr.join(" ")
-      }
-    }
-
-
+  var arr = Object.values(object)
+  return arr.join(" ")
+  }
 
 
 
@@ -44,18 +40,18 @@ function valuesToString(object){
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
-    if (Array.isArray(collection) === true) 
-    {
-      return 'array'
-    } 
     
-    else if (typeof collection === 'object') 
-    {
-      return 'object'
-    }
+    if (Array.isArray(collection) === true) 
+     
+    {return 'array'} 
+   
+     else if (typeof collection === 'object') 
+    
+     { return 'object'}
+
     };
     
-    
+
 
 
 
@@ -67,32 +63,59 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
-    
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+
+
+
+
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 6 - Capitalize All Words /////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    
+  return string.toUpperCase();
 }
+
+
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 7 - Welcome Message //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
+  if(object.hasOwnProperty('name')) {
+    var greet = object.name
+  } 
+  var welcome = "Welcome " + greet + "!"
+  
+  return welcome 
+  }
 
-}
+
+
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 8 - Profile Info /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function profileInfo(object) {
 
-}
+function profileInfo(object) {
+  var info2 = object.species;
+  var info = object.name;
+  
+  return info + " " + "is" + " " + "a" + " " + info2
+  }
+  
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 9 - Maybe Noises /////////////////////////////////////////
@@ -101,6 +124,10 @@ function profileInfo(object) {
 function maybeNoises(object) {
 
 }
+
+
+
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 10 - Has Words ///////////////////////////////////////////

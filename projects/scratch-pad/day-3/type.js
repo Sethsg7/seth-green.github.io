@@ -12,14 +12,19 @@
  * TIP: In JavaScript, how can we decipher if a value is an Array? Can typeof
  * work?
  */
-function isArray(value) {
+ function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    if(Array.isArray(value) === true){
+      return true;
+    } else {
+      return false;
+    }
     // YOUR CODE ABOVE HERE //
 }
+
+
+
+
 
 /** 
  * Given an input value, return true if the value is an Object intended as a 
@@ -29,11 +34,13 @@ function isArray(value) {
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
  */
-function isObject(value) {
+ function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    if(typeof value === 'object' && value !==null){
+      return true;
+    } else {
+      return false;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
