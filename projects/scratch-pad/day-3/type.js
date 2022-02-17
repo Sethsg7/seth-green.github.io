@@ -35,14 +35,15 @@
  * with typeof.
  */
  function isObject(value) {
-    // YOUR CODE BELOW HERE //
-    if(typeof value === 'object' && value !==null){
-      return true;
-    } else {
-      return false;
-    }
-    
-    // YOUR CODE ABOVE HERE //
+  // YOUR CODE BELOW HERE //
+  if(typeof value === 'object' && value !==null && value instanceof
+  Date !== true && Array.isArray(value) !== true){
+    return true;
+  } else {
+    return false;
+  }
+  
+  // YOUR CODE ABOVE HERE //
 }
 
 /** 
@@ -51,17 +52,18 @@
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
-function isCollection(value) {
-    // YOUR CODE BELOW HERE //
-    
-    if (Array.isarray(value) === true || typeof value === 'object' && value )
-
-
-
-    
-    
-    // YOUR CODE ABOVE HERE //
+ function isCollection(value) {
+  // YOUR CODE BELOW HERE //
+  
+  if (Array.isArray(value) === true || typeof value === 'object' 
+  && value !== null && value instanceof Date !== true){
+    return true
+  } else {
+    return false
+  }
+  // YOUR CODE ABOVE HERE //
 }
+
 
 /**
  * Given an input value, return the type of the value as a String
@@ -82,15 +84,21 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */ 
-function typeOf(value) {
-    // YOUR CODE BELOW HERE //
-    
+ function typeOf(value) {
+  // YOUR CODE BELOW HERE //
+  if(Array.isArray(value) === true) {
+    return 'array'} else if
+    (value === null)
+   {return 'null'} else if
+   (value instanceof Date) {
+     return 'date'
+   } else {
+     return typeof value
+   }  
 
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
 }
+
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
