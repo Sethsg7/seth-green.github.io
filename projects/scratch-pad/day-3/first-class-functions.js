@@ -19,16 +19,20 @@ E
 */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    return function(base2){
+      return base2 > base;
+    }
+    /*Base 2 comes from the function variable passed in later (
+        var greaterThan2 = createGreaterThanFilter(2);
+expect(greaterThan2).to.be.instanceof(Function);
+expect(greaterThan2(1)).to.be.false;
+expect(greaterThan2(3)).to.be.true;*/
     // YOUR CODE ABOVE HERE //
-}
+  }
 
 
 
-
+ 
 
 
 
@@ -39,9 +43,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+        return function(base2){
+            return base2 > base;
+          }
     
     // YOUR CODE ABOVE HERE //
 }

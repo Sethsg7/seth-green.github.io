@@ -26,11 +26,18 @@ function keysToString(object) {
 // Function 3 - Values to String /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function valuesToString(object){ 
-  var arr = Object.values(object)
-  return arr.join(" ")
-  }
+function valuesToString(object) {
+  var arr = [];
 
+  for (var key in object) {
+    if (typeof object[key] === 'string') {
+
+      arr.push(object[key])
+     
+    }
+  }
+  return arr.join(' ');
+}
 
 
 
@@ -78,27 +85,27 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 // Function 6 - Capitalize All Words /////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
 function capitalizeAllWords(string) {
-  return string.toUpperCase();
-}
 
+  function capHelp(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  return string.split(' ').map(capHelp).join(' ');
+
+}
 
 
 
 //////////////////////////////////////////////////////////////////////
 // Function 7 - Welcome Message //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
 function welcomeMessage(object) {
-  if(object.hasOwnProperty('name')) {
-    var greet = object.name
-  } 
-  var welcome = "Welcome " + greet + "!"
-  
-  return welcome 
+  if (object.hasOwnProperty('name')) {
+    var greet = object.name.charAt(0).toUpperCase() + object.name.slice(1);
+    var welcome = "Welcome " + greet + "!"
   }
-
+  return welcome
+}
 
 
 
