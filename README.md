@@ -17,6 +17,20 @@
 2.In terminal enter => git commit -m "description in quotes" 
 3. In terminal enter => git push 
 
+***Pushing Lodown (Because separate repo)***
+1)Enter into terminal => cd .. //(terminal should read /workspace)//
+2)In terminal, type => cd lowdown (workspace/lodown)
+3)git add -A
+4)git commit -m "desc"
+5)git push
+
+**How to search for Lodown Repo**
+1) Go to 3 vertical lines at top right.
+2)File--->Open File.
+3)In search bar, delete everything up to /workspace/.
+4)Select Lodown.
+5)Index.js is the main focus right now.
+
 **Testing Homework**
 1. Type sudo apt-get install subversion
 2. TYPE npm install -g opspark

@@ -183,11 +183,16 @@ function isFriend(name, object) {
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+
 function nonFriends(name, array) {
-
+  var returnArray = [];
+  var enemies = array.forEach((person) => {
+    if(person.name !== name && !person.friends.includes(name)){
+              returnArray = [...returnArray,person.name]
+  }
+})
+return returnArray
 }
-
-
 
 
 
@@ -199,7 +204,10 @@ function nonFriends(name, array) {
 //////////////////////////////////////////////////////////////////////
 
 function updateObject(object, key, value) {
-
+    object[key] = value;
+   
+   return object;
+   
 }
 
 
