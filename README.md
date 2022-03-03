@@ -19,7 +19,7 @@
 
 ***Pushing Lodown (Because separate repo)***
 1)Enter into terminal => cd .. //(terminal should read /workspace)//
-2)In terminal, type => cd lowdown (workspace/lodown)
+2)In terminal, type => cd lodown (workspace/lodown)
 3)git add -A
 4)git commit -m "desc"
 5)git push
@@ -39,3 +39,10 @@
 6. Select assignment.
 7. Look for failing tests.
 8. After passing, type os submit.
+
+**How to test let's get functional**
+1)Make sure line 6 read => var _ = require('underbar);
+2) Replace line 9 with github space
+
+
+cd .. allows you to go backwards in terminal.

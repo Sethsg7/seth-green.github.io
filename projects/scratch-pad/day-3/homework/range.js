@@ -21,18 +21,24 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
-function range(start, end) {
-    // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE GOES ABOVE HERE //
-}
+ function range(start, end) {
 
-
-
-
+    var output = [];
+  
+    if (start < end) {
+      for (var i = start; i <= end; i++) {
+        output.push(i)
+      }
+    }
+  
+    else if (start > end) {
+      for (var i = start; i >= end; i--) {
+        output.push(i)
+      }
+    }
+    return output;
+  }
+  
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

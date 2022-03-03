@@ -32,8 +32,6 @@ expect(greaterThan2(3)).to.be.true;*/
 
 
 
- 
-
 
 
 /** 
@@ -44,39 +42,61 @@ expect(greaterThan2(3)).to.be.true;*/
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
         return function(base2){
-            return base2 > base;
+            return base2 < base;
           }
     
     // YOUR CODE ABOVE HERE //
 }
+
+
+
+
+
 
 /** 
  * Given a startsWith character, which will be a single character, return a 
  * Function that tests whether a given String starts with the startsWith 
  * character.
  */
-function createStartsWithFilter(startsWith) {
+ function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
-}
+    return function(letter) {
+      
+      if (letter[0].toLowerCase() === startsWith.toLowerCase()) {
+        return true
+      } else {
+        return false
+      }
+    }
+      // YOUR CODE ABOVE HERE //
+  }
+
+
+
+
+
 
 /** 
  * Given a endsWith character, which will be a single character, return a 
  * Function that tests whether a given String ends with the endsWith 
  * character.
  */
-function createEndsWithFilter(endsWith) {
+ function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    return function(letter) {
+      return (letter[letter.length - 1].toLowerCase() === endsWith[endsWith.length - 1].toLowerCase())
+  
+    }
     // YOUR CODE ABOVE HERE //
-}
+  }
+  
+
+
+
+
+
+
+
 
 /** 
  * Given an Array of Strings and a Function designed to modify a String, 
@@ -85,14 +105,25 @@ function createEndsWithFilter(endsWith) {
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
  */
-function modifyStrings(strings, modify) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+
+ function modifyStrings(strings, modify) {
+  // YOUR CODE BELOW HERE //
+  var collection = []
+
+  strings.forEach(function(number) {
+    collection.push(modify(number));
+  })
+
+  return collection
+  // YOUR CODE ABOVE HERE //
 }
+
+
+
+
+
+
+
 
 /** 
  * Given an Array of Strings and a Function designed to test the String in some 
@@ -103,14 +134,16 @@ function modifyStrings(strings, modify) {
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
-function allStringsPass(strings, test) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+
+ function allStringsPass(strings, test) {
+  for (var i = 0; i < strings.length; i++) {
+    if (!test(strings[i][0])) {
+      return false;
+    }
+  }
+  return true;
 }
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

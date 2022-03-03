@@ -22,8 +22,8 @@ var _ = {};
 *   _.identity({a: "b"}) === {a: "b"}
 */
 
-_.identity = function(value){
-    return value;
+_.identity = function (value) {
+  return value;
 }
 
 
@@ -48,16 +48,16 @@ _.identity = function(value){
 * _.typeOf([1,2,3]) -> "array"
 */
 
-_.typeOf = function(value) {
-        if (value === null) {
-          return 'null'
-        } else if (Array.isArray(value)) {
-          return 'array'
-        } else {
-          return typeof value;
-        }
-      
-      }
+_.typeOf = function (value) {
+  if (value === null) {
+    return 'null'
+  } else if (Array.isArray(value)) {
+    return 'array'
+  } else {
+    return typeof value;
+  }
+
+}
 
 
 
@@ -80,7 +80,7 @@ _.typeOf = function(value) {
 *   _.first(["a", "b", "c"], 2) -> ["a", "b"]
 */
 
-_.first = function(array, number) {
+_.first = function (array, number) {
 
   if (!Array.isArray(array)) {
     return []
@@ -188,7 +188,7 @@ _.last = function (array, number) {
 *      -> should log "a" "b" "c" to the console
 */
 
-_.each = function() {
+_.each = function () {
 
 }
 
@@ -275,6 +275,23 @@ _.each = function() {
 */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** _.pluck
 * Arguments:
 *   1) An array of objects
@@ -285,6 +302,7 @@ _.each = function() {
 * Examples:
 *   _.pluck([{a: "one"}, {a: "two"}], "a") -> ["one", "two"]
 */
+
 
 
 /** _.every
@@ -307,6 +325,52 @@ _.each = function() {
 *   _.every([2,4,6], function(e){return e % 2 === 0}) -> true
 *   _.every([1,2,3], function(e){return e % 2 === 0}) -> false
 */
+
+
+/*_.every = function (collection, func) {
+  //let collection = [1, 2, 3, 4];
+  //let func; //=> undefined
+  //determine if no function has been passed in.
+  if (!func) {
+
+    if (Array.isArray(collection)) {
+      for (var i = 0; 1 < collection.length; i++) {
+        if (!collection[i]) {
+          return false;
+        }
+      }
+    }
+  } else {
+    for (let key in collection) {
+      if (!collection[key]) {
+        return false;
+      }
+    }
+  } else {
+       if (Array.isArray(collection)) {
+    for (let i = 0; i < collection.length; i++) {
+      if (func(collection[i], i, collection)) {
+        return false;
+      }
+    }
+  }
+}
+ else {
+    for (let key in collection) {
+      if (!func(collection[key], key, collection)) {
+        return false;
+      }
+    }
+  }
+}
+
+_.every([1, 2, 3, 4]);
+*/
+
+
+
+
+
 
 
 /** _.some
@@ -370,8 +434,8 @@ _.each = function() {
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-if((typeof process !== 'undefined') &&
-   (typeof process.versions.node !== 'undefined')) {
-    // here, export any references you need for tests //
-    module.exports = _;
+if ((typeof process !== 'undefined') &&
+  (typeof process.versions.node !== 'undefined')) {
+  // here, export any references you need for tests //
+  module.exports = _;
 }
