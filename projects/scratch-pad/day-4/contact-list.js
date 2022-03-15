@@ -34,62 +34,62 @@
  */
 
 // YOUR CODE GOES BELOW HERE //
+
 function makeContact(id, nameFirst, nameLast) {
-    var contact = {};
-  
-    contact.id = id;
-    contact.nameFirst = nameFirst;
-    contact.nameLast = nameLast;
-  
-    return contact;
-  }
-  
+  var contact = {};
 
-  function makeContactList() {
-    var conList = [];
-  
-  
-  
-    return {
-  
-      length: function() {
-        return conList.length
-      },
-  
-  
-      addContact: function(contact) {
-        return conList.push(contact);
-      },
-  
-  
-  
-      
-      findContact: function(fullName) {
-        for (var contact of conList) {
-          if (`${contact.nameFirst} ${contact.nameLast}` === fullName)
-          {return contact}
+  contact.id = id;
+  contact.nameFirst = nameFirst;
+  contact.nameLast = nameLast;
+
+  return contact;
+}
+
+
+function makeContactList() {
+
+  var contacts = [];
+
+  return {
+
+
+    length: function () {
+      return contacts.length
+    },
+
+
+    addContact: function (contact) {
+      contacts.push(contact);
+    },
+
+
+    findContact: function (fullName) {
+      for (var i = 0; i < contacts.length; i++) {
+        if (`${contacts[i].nameFirst} ${contacts[i].nameLast}` ===
+          fullName) { return contacts[i] }
+      }
+    return undefined
+  },
+
+
+
+    removeContact: function(contact) {
+      for (var i = 0; i < contacts.length; i++) {
+        if (contacts[i] == contact) {
+          contacts.splice(i, 1);
         }
-     
+      }
     }
-  
-      
-  /*findContact(fullName) {
-    takes a full - name String, like 'Max Gaudin', and returns the contact
-  object if found in the contacts - list, or,
-      undefined if the fullName does not match any contacts in the list.}*/
-  
-    }
-  }
-
+}
 // YOUR CODE GOES ABOVE HERE //
-
+}
 
 
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
-(typeof process.versions.node !== 'undefined')) {
-    // here, export any references you need for tests //
-    module.exports.makeContact = makeContact;
-    module.exports.makeContactList = makeContactList;
+if ((typeof process !== 'undefined') &&
+  (typeof process.versions.node !== 'undefined')) {
+  // here, export any references you need for tests //
+  module.exports.makeContact = makeContact;
+  module.exports.makeContactList = makeContactList;
 }

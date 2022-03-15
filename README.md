@@ -2,7 +2,7 @@
 
 **How to install new project.**
 1. In the terminal (top left option), type => code ~/.bashrc
-2. On line 4 of bashrc, add export CHE_PROJECTS_ROOT=/workspace
+2. On line 4 of bashrc, add => export CHE_PROJECTS_ROOT=/workspace
 3. Close .bashrc
 4. Close terminal.
 5. Reopen Terminal.
@@ -34,11 +34,11 @@
 **Testing Homework**
 1. Type sudo apt-get install subversion
 2. TYPE npm install -g opspark
-4. Type os test.
+4. Type os test
 5. Have personal access code ready.
 6. Select assignment.
 7. Look for failing tests.
-8. After passing, type os submit.
+8. After passing, type os submit
 
 **How to test let's get functional**
 1)Make sure line 6 read => var _ = require('underbar);

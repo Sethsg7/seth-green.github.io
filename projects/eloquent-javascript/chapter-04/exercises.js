@@ -66,9 +66,41 @@ function nth() {
 // deepEqual ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function deepEqual() {
 
-}
+//Very Difficult.
+function deepEqual(x, y) {
+  //determine if the params are not objects
+  if (typeof x !== 'object' && typeof y !== 'object') {
+    return x === y;
+    }
+    //determine if either of them is not an object
+    if (typeof x !== 'object' || typeof y !== 'object') {
+      return false;
+    }
+    //create an array of keys for x and y
+    let xKeys = Object.keys(x); //[a]
+    let yKeys = Object.keys(y); //[a]
+  // determine if the length of xKeys is equal to the length of yKeys
+    if (xKeys.length !== yKeys.length) {
+      return false;
+    }
+  //iterate through xKeys
+    for (let i = 0; i < xKeys.length; i++) {
+      if (!yKeys.includes(xKeys[i]) || !deepEqual(x[xKeys[i]], y[xKeys[i]])) {
+        return false;
+      }
+    }
+    
+    return true;
+  }
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
