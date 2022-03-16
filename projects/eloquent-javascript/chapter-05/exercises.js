@@ -2,6 +2,10 @@
 // flatten /////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
+const { characterScript } = require("./helpers");
+
+
+
 function flatten() {
 
 }
@@ -26,9 +30,33 @@ function every() {
 // dominantDirection ///////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function dominantDirection() {
-
+function dominantDirection(str) {
+  //remove spaces from input str
+  let newStr = str;
+  //create arrays for each direction
+  let ltr = [];
+  let rtl = [];
+  //iterate through input str
+  for (var i = 0; i < str.length; i++) {
+    let scriptName = characterScript(newStr.charCodeAt(i));
+    console.log(scriptName);
+    //check if the scriptName result is !== to null
+    if (scriptName !== null) {
+      scriptName.direction === "ltr" ? ltr.push(scriptName.name) : rt1.push(scriptName.name);
+    }
+  }
+  if (ltr.length > rt1.length) {
+    return "ltr";
+  } else {
+    return "rt1"
+  }
 }
+
+
+
+
+
+
 
 // /////////////////////////////////////////////////////////////////////////////
 //  //////////////////////////////////////////////////////
